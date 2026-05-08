@@ -29,14 +29,14 @@ let elementos = document.querySelector("#elementos");
 if (elementos) {
   let rowProduct = "";
   productos.forEach((index) => {
-    rowProduct.innerHTML += `
+    rowProduct += `
         <tr class="hover:bg-slate-50">
-          <td class="px-5 py-4 font-mono text-xs text-slate-600">1</td>
-          <td class="px-5 py-4 font-semibold">Arroz blanco 1kg</td>
-          <td class="px-5 py-4 text-slate-700">Arroz de grano largo, primera calidad</td>
-          <td class="px-5 py-4">$3,500</td>
+          <td class="px-5 py-4 font-mono text-xs text-slate-600">${index.id}</td>
+          <td class="px-5 py-4 font-semibold">${index.nombre}</td>
+          <td class="px-5 py-4 text-slate-700">${index.descripcion}</td>
+          <td class="px-5 py-4">${index.precio}</td>
           <td class="px-5 py-4">100</td>
-          <td class="px-5 py-4 font-mono text-xs text-slate-600">assets/img/arroz.png</td>
+          <td class="px-5 py-4 font-mono text-xs text-slate-600"><img src=${index.imagen}></td>
           <td class="px-5 py-4">
             <span class="inline-flex items-center rounded-full bg-emerald-50 px-2.5 py-1 text-xs font-semibold text-emerald-700">true</span>
           </td>
